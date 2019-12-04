@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="icon" href="/img/weather.png">
+    <title>Weather</title>
+    <link rel="stylesheet" href="/css/styles.css"> <!--rel means 'relation' i.e. here it is a stylesheet. --> 
+    
+</head>
+
+<body>
+
+        <div class="main-content">
+            {{>header}}
+            <p>Use this site to get all the weather content!</p>
+
+            <form>
+                <input placeholder="Location">
+                <button>Search</button>
+
+            </form>
+
+            <p id="message-1"></p>
+            <p id="message-2"></p>
+
+        </div>
+        <!--Trying to access title and name attribute which is being sent to this view via render function-->
+   <!--     <h1>{{title}}</h1> -->
+
+        <script src= "/js/app.js"></script> 
+        {{>footer}}
+
+</body>
+
+</html>
