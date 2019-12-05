@@ -15,7 +15,7 @@ const forecast= (latitude, longitude, callback) => {
         }
         else
         {
-            callback(undefined, body.daily.data[0].summary+" It is currently "+body.currently.temperature+" degrees out. There is a "+(body.currently.precipProbability)*100+"% chance of rain")
+            callback(undefined, body.daily.data[0].summary+" The highest temprature will be "+body.daily.data[0].temperatureHigh+". It is currently "+body.currently.temperature+" degrees out. There is a "+(body.currently.precipProbability)*100+"% chance of rain")
         }
     })
 }
