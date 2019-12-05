@@ -10,6 +10,8 @@ const forecast= require('./utils/forecast')
 
 const app=express()  //the express module is basically a function
 
+const port = process.env.PORT || 3000
+
 //Define Path for express config//
 const publicDirectory= path.join(__dirname,'../public')
 const viewsPath= path.join(__dirname,'../templates/views')
@@ -143,7 +145,7 @@ app.get('*', (req,res)=> // '*' is a special character provided by express which
 })
 
 
-app.listen(3000, ()=> {   // .listen takes in 2 arguments---> port number (where the server will run) and a function which will be executed if the server is started succesfully.
-    console.log('Server is up on port 3000!!!')
+app.listen(port, ()=> {   // .listen takes in 2 arguments---> port number (where the server will run) and a function which will be executed if the server is started succesfully.
+    console.log('Server is up on port' + port +'!!!')
 })
 
